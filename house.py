@@ -50,13 +50,17 @@ if 'longitude' in df.columns and 'latitude' in df.columns:
 
 # 创建直方图
 fig, ax = plt.subplots()
+median_income = df.median_house_value.value_counts()
+df.median_income.hist(bins=30)
+ 
+
+fig, ax = plt.subplots(figsize=(15, 8))
+data =df[(df.median_house_value>=200000)&(df.median_income<=2.5)]
 
 
-# 筛选出 median_house_value 在 200000 到 500000 之间的数据
-filtered_data = df[(df['median_house_value'] >= 200000) & (df['median_house_value'] <= 500000)]
 
 # 绘制筛选后的直方图，设置 30 个区间
-plt.hist(filtered_data['median_house_value'], bins=30)
+plt.hist(data['median_house_value'], bins=30)
 
 ax.set_xlabel('Median House Value')
 ax.set_ylabel('Frequency')
