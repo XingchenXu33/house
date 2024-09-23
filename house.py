@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('housing.csv')
 
 # Set the title of the app
-st.title('California Housing Data (1990)')
+st.title('California Housing Data (1990) Xingchen Xu')
 
 # Price Slider
 min_price = 0
@@ -48,7 +48,7 @@ if 'longitude' in df.columns and 'latitude' in df.columns:
 
 # 创建直方图
 fig, ax = plt.subplots()
-plt.style.use('seaborn')
+
 
 # 筛选出 median_house_value 在 200000 到 500000 之间的数据
 filtered_data = df[(df['median_house_value'] >= 200000) & (df['median_house_value'] <= 500000)]
