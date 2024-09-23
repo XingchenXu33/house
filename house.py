@@ -62,6 +62,7 @@ ax.set_title('Distribution of Median House Value')
 
 # 显示直方图
 st.pyplot(fig)
+plt.grid(True)
 fig, ax = plt.subplots()
 
 
