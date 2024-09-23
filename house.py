@@ -56,7 +56,7 @@ fig, ax = plt.subplots()
 filtered_data = df[(df['median_house_value'] >= 200000) & (df['median_house_value'] <= 500000)]
 
 # 绘制筛选后的直方图，设置 30 个区间
-plt.hist(filtered_data['median_house_value'], bins=30, edgecolor='black')
+plt.hist(filtered_data['median_house_value'], bins=30)
 
 ax.set_xlabel('Median House Value')
 ax.set_ylabel('Frequency')
