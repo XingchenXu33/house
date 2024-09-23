@@ -1,7 +1,9 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
+sns.set()
 # Load the data
 
 df = pd.read_csv('housing.csv')
